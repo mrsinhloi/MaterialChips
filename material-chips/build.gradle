@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.compileSdkVersion
+        versionCode 9
+        versionName "1.0.8"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+repositories {
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }//picasso
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.3.0-alpha05', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testImplementation 'junit:junit:4.13'
+
+    // recycler
+    implementation ("androidx.recyclerview:recyclerview:${rootProject.ext.recyclerView}"){force = true}
+    implementation ("androidx.appcompat:appcompat:${rootProject.ext.appCompat}"){force = true}
+    implementation 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
+
+    // circle image view
+    api 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+}
+
+//apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.pchmn'
