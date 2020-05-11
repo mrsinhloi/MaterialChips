@@ -316,10 +316,10 @@ public class ChipsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     }
 
-    public void removeChipById(long id) {
+    public void removeChipById(String id) {
         for (Iterator<ChipInterface> iter = mChipList.listIterator(); iter.hasNext(); ) {
             ChipInterface chip = iter.next();
-            if (chip.get_id() == id) {
+            if (chip.get_id().equals(id)) {
                 // remove chip
                 iter.remove();
                 // notify listener
@@ -380,7 +380,7 @@ public class ChipsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             }
         } else {
             for (ChipInterface item : contactList) {
-                if (chip.get_id() == item.get_id())
+                if (chip.get_id().equals(item.get_id()))
                     return true;
                 if (chip.getLabel().equals(item.getLabel()) && chip.getInfo().equals(item.getInfo()))
                     return true;

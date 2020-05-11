@@ -7,7 +7,7 @@ import android.net.Uri;
 public interface ChipInterface {
     public static final String CHIP_INTERFACE = "CHIP_INTERFACE";
 
-    long get_id();
+    String get_id();
 
     Uri getAvatarUri();
 

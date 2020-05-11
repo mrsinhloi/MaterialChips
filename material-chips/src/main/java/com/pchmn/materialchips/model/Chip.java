@@ -8,20 +8,20 @@ import androidx.annotation.Nullable;
 
 public class Chip implements ChipInterface {
 
-    private long id;
+    private String id;
     private Uri avatarUri;
     private Drawable avatarDrawable;
     private String label;
     private String info;
 
-    public Chip(@NonNull long id, @Nullable Uri avatarUri, @NonNull String label, @Nullable String info) {
+    public Chip(@NonNull String id, @Nullable Uri avatarUri, @NonNull String label, @Nullable String info) {
         this.id = id;
         this.avatarUri = avatarUri;
         this.label = label;
         this.info = info;
     }
 
-    public Chip(@NonNull long id, @Nullable Drawable avatarDrawable, @NonNull String label, @Nullable String info) {
+    public Chip(@NonNull String id, @Nullable Drawable avatarDrawable, @NonNull String label, @Nullable String info) {
         this.id = id;
         this.avatarDrawable = avatarDrawable;
         this.label = label;
@@ -40,7 +40,7 @@ public class Chip implements ChipInterface {
         this.info = info;
     }
 
-    public Chip(@NonNull long id, @NonNull String label, @Nullable String info) {
+    public Chip(@NonNull String id, @NonNull String label, @Nullable String info) {
         this.id = id;
         this.label = label;
         this.info = info;
@@ -52,7 +52,7 @@ public class Chip implements ChipInterface {
     }
 
     @Override
-    public long get_id() {
+    public String get_id() {
         return id;
     }
 

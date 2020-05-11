@@ -34,15 +34,15 @@ dependencies {
 
     testImplementation 'junit:junit:4.13'
 
-    // recycler
-    implementation ("androidx.recyclerview:recyclerview:${rootProject.ext.recyclerView}"){force = true}
-    implementation ("androidx.appcompat:appcompat:${rootProject.ext.appCompat}"){force = true}
-    implementation 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
-
     // circle image view
     api 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+
+    // recycler
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.appCompat}"
+    implementation "androidx.recyclerview:recyclerview:${rootProject.ext.recyclerView}"
+    implementation 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
 }
 
 //apply plugin: 'com.github.dcendents.android-maven'

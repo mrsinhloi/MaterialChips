@@ -150,7 +150,7 @@ public class ChipsInput extends ScrollViewMaxHeight {
         mChipsAdapter.addChip(chip);
     }
 
-    public void addChip(long id, Drawable icon, String label, String info) {
+    public void addChip(String id, Drawable icon, String label, String info) {
         Chip chip = new Chip(id, icon, label, info);
         mChipsAdapter.addChip(chip);
     }
@@ -160,7 +160,7 @@ public class ChipsInput extends ScrollViewMaxHeight {
         mChipsAdapter.addChip(chip);
     }
 
-    public void addChip(long id, Uri iconUri, String label, String info) {
+    public void addChip(String id, Uri iconUri, String label, String info) {
         Chip chip = new Chip(id, iconUri, label, info);
         mChipsAdapter.addChip(chip);
     }
@@ -179,7 +179,7 @@ public class ChipsInput extends ScrollViewMaxHeight {
         mChipsAdapter.removeChip(chip);
     }
 
-    public void removeChipById(long id) {
+    public void removeChipById(String id) {
         mChipsAdapter.removeChipById(id);
     }
 
