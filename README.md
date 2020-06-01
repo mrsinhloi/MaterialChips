@@ -16,6 +16,6 @@ allprojects {
 Step 2. Add the dependency
 ```
 dependencies {
-  implementation 'com.github.mrsinhloi:MaterialChips:1.0.1'
+  implementation 'com.github.mrsinhloi:MaterialChips:1.0.2'
 }
 ```
